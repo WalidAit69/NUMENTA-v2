@@ -14,11 +14,11 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Empty } from "@/components/Empty";
 import { Loader } from "@/components/Loader";
-
-
+import { useProModal } from "@/hooks/UseProModel";
 
 function VideoPage() {
   const router = useRouter();
+  const proModel = useProModal();
 
   const [video, setvideo] = useState();
 
@@ -33,14 +33,15 @@ function VideoPage() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-
       const res = await axios.post("/api/video", values);
 
-      setvideo(res.data[0])
+      setvideo(res.data[0]);
 
       form.reset();
     } catch (error: any) {
-      console.log(error);
+      if (error?.response?.status === 403) {
+        proModel.onOpen();
+      }
     } finally {
       router.refresh();
     }
@@ -97,16 +98,16 @@ function VideoPage() {
             </div>
           )}
 
-          {!video && !isLoading && (
-            <Empty label={"Start Generating"} />
-          )}
+          {!video && !isLoading && <Empty label={"Start Generating"} />}
 
           {video && (
-            <video controls className="w-full aspect-video mt-8 rounded-lg border bg-black">
-              <source src={video}/>
+            <video
+              controls
+              className="w-full aspect-video mt-8 rounded-lg border bg-black"
+            >
+              <source src={video} />
             </video>
           )}
-
         </div>
       </div>
     </>

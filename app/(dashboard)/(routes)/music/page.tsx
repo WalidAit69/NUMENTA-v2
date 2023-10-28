@@ -14,9 +14,11 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Empty } from "@/components/Empty";
 import { Loader } from "@/components/Loader";
+import { useProModal } from "@/hooks/UseProModel";
 
 function MusicPage() {
   const router = useRouter();
+  const proModel = useProModal();
 
   const [music, setmusic] = useState();
 
@@ -37,7 +39,9 @@ function MusicPage() {
 
       form.reset();
     } catch (error: any) {
-      console.log(error);
+      if (error?.response?.status === 403) {
+        proModel.onOpen();
+      }
     } finally {
       router.refresh();
     }
@@ -101,7 +105,6 @@ function MusicPage() {
               <source src={music} />
             </audio>
           )}
-
         </div>
       </div>
     </>

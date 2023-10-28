@@ -23,8 +23,11 @@ import {
 } from "@/components/ui/select";
 import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
+import { useProModal } from "@/hooks/UseProModel";
 
 function ImagePage() {
+  const proModel = useProModal();
+
   const router = useRouter();
 
   const [images, setimages] = useState([]);
@@ -52,7 +55,9 @@ function ImagePage() {
 
       form.reset();
     } catch (error: any) {
-      console.log(error);
+      if (error?.response?.status === 403) {
+        proModel.onOpen();
+      }
     } finally {
       router.refresh();
     }
@@ -170,27 +175,21 @@ function ImagePage() {
           )}
 
           <div className="gap-4 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {images.map((src , index) => (
+            {images.map((src, index) => (
               <Card key={src} className="rounded-lg overflow-hidden">
                 <div className="relative aspect-square">
-                  <Image
-                    alt="generated image"
-                    fill
-                    src={src}
-                  />
+                  <Image alt="generated image" fill src={src} />
                 </div>
-                
+
                 <CardFooter className="p-2">
-                  <Button 
-                  onClick={() => window.open(src)}
-                  variant={"secondary"} 
-                  className="w-full">
-                    <Download className="h-4 w-4 mr-2">
-                      Download
-                    </Download>
+                  <Button
+                    onClick={() => window.open(src)}
+                    variant={"secondary"}
+                    className="w-full"
+                  >
+                    <Download className="h-4 w-4 mr-2">Download</Download>
                   </Button>
                 </CardFooter>
-
               </Card>
             ))}
           </div>

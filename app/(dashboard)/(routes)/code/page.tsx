@@ -19,9 +19,11 @@ import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/userAvatar";
 import { BotAvatar } from "@/components/botAvatar";
 import ReactMarkdown from "react-markdown"
+import { useProModal } from "@/hooks/UseProModel";
 
 
 function CodePage() {
+  const proModel = useProModal();
   const router = useRouter();
   const [messages, setmessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -50,7 +52,9 @@ function CodePage() {
 
       form.reset();
     } catch (error: any) {
-      console.log(error);
+      if(error?.response?.status === 403){
+        proModel.onOpen();
+      }
     } finally {
       router.refresh();
     }

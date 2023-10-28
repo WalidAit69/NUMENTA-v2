@@ -18,10 +18,12 @@ import { Loader } from "@/components/Loader";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/userAvatar";
 import { BotAvatar } from "@/components/botAvatar";
+import { useProModal } from "@/hooks/UseProModel";
 
 
 
 function Conversationpage() {
+  const proModel = useProModal();
   const router = useRouter();
   const [messages, setmessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -50,7 +52,9 @@ function Conversationpage() {
 
       form.reset();
     } catch (error: any) {
-      console.log(error);
+      if(error?.response?.status === 403){
+        proModel.onOpen();
+      }
     } finally {
       router.refresh();
     }
