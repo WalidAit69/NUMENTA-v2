@@ -26,6 +26,7 @@ function SubscriptionButton({ isPremium }: SubscriptionButtonProps) {
 
   return (
     <Button
+      className="w-fit"
       onClick={onClick}
       disabled={loading}
       variant={isPremium ? "default" : "premuim"}

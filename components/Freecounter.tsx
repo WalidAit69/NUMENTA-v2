@@ -7,12 +7,14 @@ import { Progress } from "@/components/ui/progress";
 import { Button } from "./ui/button";
 import { Zap } from "lucide-react";
 import { useProModal } from "@/hooks/UseProModel";
+import { checkSubscription } from "@/lib/subscription";
 
 interface SidebarProps {
   apiLimitCount: number;
+  isPremium:boolean;
 }
 
-function Freecounter({ apiLimitCount }: SidebarProps) {
+function Freecounter({ apiLimitCount = 0, isPremium = false}: SidebarProps) {
   const proModal = useProModal();
   const [mounted, setmounted] = useState(false);
 
@@ -21,6 +23,10 @@ function Freecounter({ apiLimitCount }: SidebarProps) {
   }, []);
 
   if (!mounted) {
+    return null;
+  }
+
+  if(isPremium){
     return null;
   }
 

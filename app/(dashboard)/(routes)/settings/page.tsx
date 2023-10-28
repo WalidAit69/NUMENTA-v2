@@ -16,7 +16,7 @@ async function SettingsPage() {
         bgColor="bg-gray-700/10"
       />
       <div className="px-4 lg:px-8 space-y-4">
-        <div className="text-muted-foreground text-sm">
+        <div className="text-muted-foreground text-sm flex flex-col gap-y-2">
           {isPremium
             ? "You are currently a Premium Member"
             : "You are currently on a free plan"}

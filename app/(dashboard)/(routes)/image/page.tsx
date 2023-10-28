@@ -25,6 +25,7 @@ import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 import { useProModal } from "@/hooks/UseProModel";
 
+
 function ImagePage() {
   const proModel = useProModal();
 
