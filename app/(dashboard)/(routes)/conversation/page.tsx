@@ -19,8 +19,7 @@ import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/userAvatar";
 import { BotAvatar } from "@/components/botAvatar";
 import { useProModal } from "@/hooks/UseProModel";
-
-
+import toast from "react-hot-toast";
 
 function Conversationpage() {
   const proModel = useProModal();
@@ -52,8 +51,10 @@ function Conversationpage() {
 
       form.reset();
     } catch (error: any) {
-      if(error?.response?.status === 403){
+      if (error?.response?.status === 403) {
         proModel.onOpen();
+      } else {
+        toast.error("Something went wrong");
       }
     } finally {
       router.refresh();

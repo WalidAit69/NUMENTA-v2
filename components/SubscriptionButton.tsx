@@ -4,6 +4,7 @@ import { Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import axios from "axios";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 interface SubscriptionButtonProps {
   isPremium: boolean;
@@ -18,7 +19,7 @@ function SubscriptionButton({ isPremium }: SubscriptionButtonProps) {
 
       window.location.href = res.data.url;
     } catch (error) {
-      console.log("Billing Error", error);
+      toast.error("Something went wrong")
     } finally {
       setloading(false);
     }

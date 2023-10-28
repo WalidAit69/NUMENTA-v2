@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import axios from "axios";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const tools = [
   {
@@ -64,7 +65,7 @@ function ProModal() {
 
       window.location.href =  res.data.url
     } catch (error) {
-      console.error(error)
+      toast.error("Something went wrong")
     } finally{
       setloading(false)
     }

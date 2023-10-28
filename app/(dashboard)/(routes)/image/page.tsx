@@ -24,6 +24,7 @@ import {
 import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 import { useProModal } from "@/hooks/UseProModel";
+import toast from "react-hot-toast";
 
 
 function ImagePage() {
@@ -58,6 +59,8 @@ function ImagePage() {
     } catch (error: any) {
       if (error?.response?.status === 403) {
         proModel.onOpen();
+      }else {
+        toast.error("Something went wrong");
       }
     } finally {
       router.refresh();
