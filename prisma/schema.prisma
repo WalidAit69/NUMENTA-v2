@@ -17,6 +17,7 @@ model UserApiLimit {
   count     Int      @default(0)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  Images    Images[]
 }
 
 model UserSubscription {
@@ -29,7 +30,8 @@ model UserSubscription {
 }
 
 model Images {
-  id     Int    @id @default(autoincrement())
-  userId String @unique
+  id     Int          @id @default(autoincrement())
+  userId String       @unique
   images String
+  user   UserApiLimit @relation(fields: [userId], references: [id])
 }

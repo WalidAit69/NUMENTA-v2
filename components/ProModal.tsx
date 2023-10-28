@@ -16,6 +16,8 @@ import { useProModal } from "@/hooks/UseProModel";
 import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import axios from "axios";
+import { useState } from "react";
 
 const tools = [
   {
@@ -52,6 +54,22 @@ const tools = [
 
 function ProModal() {
   const proModal = useProModal();
+  const [loading, setloading] = useState(false);
+
+  const onSubscribe = async () =>{
+    try {
+      setloading(true)
+
+      const res = await axios.get("/api/stripe")
+
+      window.location.href =  res.data.url
+    } catch (error) {
+      console.error(error)
+    } finally{
+      setloading(false)
+    }
+  }
+
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
       <DialogContent>
@@ -85,6 +103,8 @@ function ProModal() {
         </DialogHeader>
         <DialogFooter>
             <Button
+            onClick={onSubscribe}
+            disabled={loading}
             size={"lg"}
             variant={"premuim"}
             className="w-full"
