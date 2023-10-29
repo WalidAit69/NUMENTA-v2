@@ -16,7 +16,7 @@ export default async function Navbar() {
       </div>
 
       <div className="flex w-full justify-end">
-        <UserButton />
+        <UserButton afterSignOutUrl="https://better-ai-five.vercel.app" />
       </div>
     </div>
   );
