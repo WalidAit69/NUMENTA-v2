@@ -9,8 +9,9 @@ import { CrispProvider } from "@/components/crisp/CrispProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Numenta",
+  title: "Better AI",
   description: "Ai Platform",
+  
 };
 
 export default function RootLayout({
@@ -21,6 +22,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
+        </head>
         <CrispProvider/>
         <body className={inter.className}>
           <ModalProvider />
