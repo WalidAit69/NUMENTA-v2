@@ -7,11 +7,11 @@ export const Loader = () =>{
                 <Image
                 fill
                 alt="loader"
-                src={"/logo.png"}
+                src={"/logo.svg"}
                 />
             </div>
             <p className="text-sm text-muted-foreground">
-                Numenta is thinking...
+                Im thinking...
             </p>
         </div>
     )
