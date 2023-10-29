@@ -7,6 +7,12 @@ body,
 :root{
   height: 100%;
 }
+
+::selection{
+  color: #948576;
+}
+
+
  
 @layer base {
   :root {
