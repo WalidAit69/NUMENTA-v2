@@ -1,12 +1,5 @@
+const Landinglayout = ({ children }: { children: React.ReactNode }) => {
+  return <div className="w-full bg-black">{children}</div>;
+};
 
-const Landinglayout = ({children} : {children:React.ReactNode}) => {
-  return (
-    <div className="h-full bg-black overflow-auto">
-        <div className="h-full w-full">
-            {children}
-        </div>
-    </div>
-  )
-}
-
-export default Landinglayout
+export default Landinglayout;

@@ -42,7 +42,7 @@ const LandingNavbar = () => {
   }, [MenuOpen, screenWidth]);
 
   return (
-    <div className="flex items-center justify-between p-4 min-[500px]:px-10">
+    <div className="flex items-center justify-between p-4 min-[500px]:px-10 z-50">
       <div className="overflow-hidden relative sm:h-[40px] h-[30px]">
         <motion.h1
           initial={{ marginTop: "3rem" }}
@@ -50,8 +50,8 @@ const LandingNavbar = () => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className="sm:text-3xl text-xl font-[200] cursor-pointer"
         >
-          Better
-          <span className="font-extrabold">AI</span>
+          End
+          <span className="font-extrabold">Journey</span>
         </motion.h1>
       </div>
 
