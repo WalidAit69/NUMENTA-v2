@@ -6,7 +6,7 @@ import { ModalProvider } from "@/components/modalProvide";
 import { ToasterProvider } from "@/components/ToasterProvider";
 import { CrispProvider } from "@/components/crisp/CrispProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Better AI",
@@ -26,7 +26,7 @@ export default function RootLayout({
           <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
         </head>
         <CrispProvider/>
-        <body className={inter.className}>
+        <body>
           <ModalProvider />
           <ToasterProvider/>
           {children}
