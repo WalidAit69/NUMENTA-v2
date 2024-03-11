@@ -98,7 +98,7 @@ function LandingPage() {
             initial={{ rotate: "-15deg", scale: 1.5 }}
             animate={imgcontrols}
             transition={{ duration: 1, ease: "easeInOut" }}
-            src="./sculporiginalnobg.png"
+            src="https://ucarecdn.com/2049fd82-e34a-4ea2-b66a-034d49c19f08/"
             alt=""
             className="w-full h-full object-cover relative z-50"
           />
