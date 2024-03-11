@@ -39,6 +39,7 @@
 }
 
 
+
 @media (max-width:1600px) {
     .landing-h1 {
         font-size: clamp(10px, 13vw, 200px);
@@ -49,7 +50,7 @@
 @media (max-width:1300px) {
     .landing-h1 {
         font-size: clamp(10px, 12vw, 200px);
-        bottom: -2.5rem;
+        bottom: 10rem;
     }
 }
 
