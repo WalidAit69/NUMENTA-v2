@@ -50,7 +50,7 @@ const LandingNavbar = () => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className="sm:text-3xl text-xl font-[200] cursor-pointer"
         >
-          End
+          Mid
           <span className="font-extrabold">Journey</span>
         </motion.h1>
       </div>

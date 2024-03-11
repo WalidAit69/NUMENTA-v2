@@ -38,6 +38,9 @@
     bottom: -5rem;
 }
 
+.video-astro{
+    height: 700px;
+}
 
 
 @media (max-width:1600px) {
@@ -80,5 +83,12 @@
 @media (max-width:450px) {
     .landing-h1 {
         font-size: 20px;
+    }
+}
+
+
+@media (max-height:800px) {
+    .video-astro{
+        height: 500px;
     }
 }
