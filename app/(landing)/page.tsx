@@ -9,6 +9,7 @@ import { twMerge } from "tailwind-merge";
 import VideoSection from "@/components/Landing page/VideoSection";
 import UpdateSection from "@/components/Landing page/UpdateSection";
 import StartSection from "@/components/Landing page/StartSection";
+import Footer from "@/components/Landing page/Footer";
 
 function LandingPage() {
   const { isSignedIn } = useAuth();
@@ -102,7 +103,7 @@ function LandingPage() {
               initial={{ rotate: "-15deg", scale: 1.5 }}
               animate={imgcontrols}
               transition={{ duration: 1, ease: "easeInOut" }}
-              src="./test.png"
+              src="./sculpture.webp"
               alt=""
               className="w-full h-full object-cover relative z-10"
             />
@@ -198,6 +199,8 @@ function LandingPage() {
       <UpdateSection />
 
       <StartSection />
+
+      <Footer />
     </>
   );
 }
