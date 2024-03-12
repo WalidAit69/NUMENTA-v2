@@ -7,6 +7,7 @@ import { useAuth } from "@clerk/nextjs";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import VideoSection from "@/components/Landing page/VideoSection";
+import UpdateSection from "@/components/Landing page/UpdateSection";
 
 function LandingPage() {
   const { isSignedIn } = useAuth();
@@ -192,6 +193,8 @@ function LandingPage() {
       </section>
 
       <VideoSection />
+
+      <UpdateSection />
     </>
   );
 }
