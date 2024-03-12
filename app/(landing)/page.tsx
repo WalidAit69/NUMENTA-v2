@@ -8,6 +8,7 @@ import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import VideoSection from "@/components/Landing page/VideoSection";
 import UpdateSection from "@/components/Landing page/UpdateSection";
+import StartSection from "@/components/Landing page/StartSection";
 
 function LandingPage() {
   const { isSignedIn } = useAuth();
@@ -195,6 +196,8 @@ function LandingPage() {
       <VideoSection />
 
       <UpdateSection />
+
+      <StartSection />
     </>
   );
 }
