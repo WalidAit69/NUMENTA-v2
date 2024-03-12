@@ -46,7 +46,7 @@
 @media (max-width:1600px) {
     .landing-h1 {
         font-size: clamp(10px, 13vw, 200px);
-        bottom: -3.5rem;
+        bottom: 50%;
     }
 }
 

@@ -67,7 +67,7 @@ function StartSection() {
           transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
           className="mt-6 font-semibold bg-[#1c2540] text-white py-3 px-4 rounded-full inline-block z-50"
         >
-          Let's start
+          Let&apos;s start
         </motion.button>
 
         <motion.img
