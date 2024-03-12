@@ -51,18 +51,85 @@ function UpdateSection() {
           initial={{ rotate: "-15deg", scale: 1.5, y: -200, opacity: 0 }}
           whileInView={{ rotate: 0, scale: 1, y: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }}
-          className="bg-[#27272763] w-full h-[600px] rounded-3xl flex flex-col items-center"
+          className="bg-[#27272763] w-full h-[600px] rounded-3xl flex flex-col items-center justify-between"
         >
           <div className="text-white text-center mt-10 flex flex-col items-center gap-5">
-            <h2 className="text-6xl font-bold max-w-lg">Much more accurate prompt</h2>
-            <p className="max-w-[22rem] opacity-50 font-light">
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+              className="text-6xl font-bold max-w-lg"
+            >
+              Much more accurate prompt
+            </motion.h2>
+            <motion.p
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 0.5 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+              className="max-w-[22rem] font-light"
+            >
               Midjourney is an independent research lab exploring new mediums of
               thought and expanding the imaginative powers of the human species.
-            </p>
+            </motion.p>
           </div>
-          
-          <div>
 
+          <div className="mb-16 relative">
+            <motion.div
+              initial={{ scale: 0.2, opacity: 0, rotate: "45deg" }}
+              whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
+            >
+              <img
+                src="./medium1.webp"
+                className="w-[180px] h-[180px] rounded-xl inline-block object-cover rotate-[-5deg]"
+                alt=""
+              />
+              <img
+                src="./medium2.webp"
+                className="w-[190px] h-[220px] rounded-xl inline-block object-cover rotate-[5deg]"
+                alt=""
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{
+                y: -60,
+                x: -60,
+                opacity: 0,
+                rotate: "-15deg",
+                scale: 1.2,
+              }}
+              whileInView={{
+                y: 0,
+                x: 0,
+                opacity: 1,
+                rotate: "-5deg",
+                scale: 1,
+              }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
+              className="bg-[#cdb0a5] text-[#8c5a45] text-xl font-bold py-3 px-7 rounded-full absolute top-[-10%] left-[22%]"
+            >
+              New
+            </motion.div>
+
+            <motion.div
+              initial={{
+                y: 60,
+                opacity: 0,
+                rotate: "15deg",
+                scale: 1.2,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                rotate: "5deg",
+                scale: 1,
+              }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
+              className="bg-[#febf01] text-[#886202] text-xl font-bold py-3 px-7 rounded-full absolute bottom-0 left-[30%]"
+            >
+              Prompt
+            </motion.div>
           </div>
         </motion.div>
 
@@ -70,8 +137,87 @@ function UpdateSection() {
           initial={{ rotate: "-25deg", scale: 1.4, y: -200, opacity: 0 }}
           whileInView={{ rotate: 0, scale: 1, y: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut", delay: 0.6 }}
-          className="bg-[#27272763] w-full h-[600px] rounded-3xl"
-        ></motion.div>
+          className="bg-[#27272763] w-full h-[600px] rounded-3xl flex flex-col items-center justify-between"
+        >
+          <div className="text-white text-center mt-10 flex flex-col items-center gap-5">
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+              className="text-6xl font-bold max-w-lg"
+            >
+              Minor text drawing ability
+            </motion.h2>
+            <motion.p
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 0.5 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+              className="max-w-[22rem] font-light"
+            >
+              you must write your text in quotations and --style raw or lower
+              --stylize values may help
+            </motion.p>
+          </div>
+
+          <div className="mb-16 relative">
+            <motion.div
+              initial={{ scale: 0.2, opacity: 0, rotate: "-45deg" }}
+              whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
+            >
+              <img
+                src="./medium5.webp"
+                className="w-[190px] h-[220px] rounded-xl inline-block object-cover rotate-[-5deg]"
+                alt=""
+              />
+              <img
+                src="./medium4.webp"
+                className="w-[180px] h-[180px] rounded-xl inline-block object-cover rotate-[5deg]"
+                alt=""
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{
+                y: -60,
+                x: -60,
+                opacity: 0,
+                rotate: "-15deg",
+                scale: 1.2,
+              }}
+              whileInView={{
+                y: 0,
+                x: 0,
+                opacity: 1,
+                rotate: "-5deg",
+                scale: 1,
+              }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
+              className="bg-[#f2baff] text-[#b378bf] text-xl font-bold py-3 px-7 rounded-full absolute top-[-10%] left-[50%]"
+            >
+              UPD
+            </motion.div>
+
+            <motion.div
+              initial={{
+                y: 60,
+                opacity: 0,
+                rotate: "15deg",
+                scale: 1.2,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                rotate: "5deg",
+                scale: 1,
+              }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
+              className="bg-[#94a7bb] text-[#4c5e75] text-xl font-bold py-3 px-7 rounded-full absolute bottom-[-10%] left-[0%]"
+            >
+              Text
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
