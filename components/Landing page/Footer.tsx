@@ -85,7 +85,7 @@ function Footer() {
               transition={{ duration: 1, delay: 1.4, ease: [0.8, 0, 0, 0.8] }}
               className="mt-20 flex flex-col items-center font-normal text-2xl"
             >
-              <span>designed by:</span>
+              <span>Designed by:</span>
               <a
                 href="mailto:hello@fulcrum.rocks"
                 className="text-5xl font-bold"

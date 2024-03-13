@@ -29,8 +29,7 @@ function VideoSection() {
 
   return (
     <section>
-      <div className="h-[75vh]"></div>
-      <div className="h-[100vh] flex items-center justify-center">
+      <div className="h-[100vh] flex items-center justify-center mt-10">
         <motion.div
           initial={{ width: "55%", scale: 0.1, rotate: "15deg", opacity: 0 }}
           whileInView={{ width: "95%", scale: 1, rotate: 0, opacity: 1 }}
@@ -65,7 +64,7 @@ function VideoSection() {
             {IsPlayed ? (
               <FaPause color="white" size={30} />
             ) : (
-              <FaPlay color="white" size={25} className="ml-1"/>
+              <FaPlay color="white" size={25} className="ml-1" />
             )}
           </motion.div>
         </motion.div>

@@ -46,35 +46,30 @@
 @media (max-width:1600px) {
     .landing-h1 {
         font-size: clamp(10px, 13vw, 200px);
-        bottom: 50%;
     }
 }
 
-@media (max-width:1300px) {
+@media (max-width:1500px) {
     .landing-h1 {
         font-size: clamp(10px, 12vw, 200px);
-        bottom: 10rem;
     }
 }
 
 @media (max-width:1024px) {
     .landing-h1 {
         font-size: clamp(10px, 10vw, 150px);
-        bottom: -1.25rem;
     }
 }
 
 @media (max-width:800px) {
     .landing-h1 {
         font-size: clamp(10px, 8vw, 200px);
-        bottom: -1rem;
     }
 }
 
 @media (max-width:640px) {
     .landing-h1 {
         font-size: 30px;
-        bottom: 0rem;
         align-items: center;
         justify-content: center;
     }
