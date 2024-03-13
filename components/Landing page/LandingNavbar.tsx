@@ -5,6 +5,7 @@ import { useAuth } from "@clerk/nextjs";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import { UserButton } from "@clerk/nextjs";
 
 const LandingNavbar = () => {
   const { isSignedIn } = useAuth();
@@ -106,22 +107,30 @@ const LandingNavbar = () => {
         transition={{ duration: 0.3, delay: 0.6, ease: "easeInOut" }}
         className="flex items-center font-bold"
       >
-        <Link
-          href={isSignedIn ? "/dashboard" : "sign-in"}
-          className="hidden xl:flex"
-        >
-          <Button
-            className="flex items-center text-base text-[#caef84] hover:opacity-80"
-            variant={"default"}
-          >
-            SIGN IN
-          </Button>
-        </Link>
-        <Link href={isSignedIn ? "/dashboard" : "sign-up"} className="flex">
-          <button className="flex items-center text-xs sm:text-base bg-[#dbff58] text-black sm:px-4 px-2 rounded-full hover:opacity-80 h-[25px] sm:h-[35px] xl:h-[40px]">
-            GET STARTED
-          </button>
-        </Link>
+        {!isSignedIn ? (
+          <>
+            <Link
+              href={isSignedIn ? "/dashboard" : "sign-in"}
+              className="hidden xl:flex"
+            >
+              <Button
+                className="flex items-center text-base text-[#caef84] hover:opacity-80"
+                variant={"default"}
+              >
+                SIGN IN
+              </Button>
+            </Link>
+            <Link href={isSignedIn ? "/dashboard" : "sign-up"} className="flex">
+              <button className="flex items-center text-xs sm:text-base bg-[#dbff58] text-black sm:px-4 px-2 rounded-full hover:opacity-80 h-[25px] sm:h-[35px] xl:h-[40px]">
+                GET STARTED
+              </button>
+            </Link>
+          </>
+        ) : (
+          <div className="">
+            <UserButton afterSignOutUrl="https://better-ai-five.vercel.app" />
+          </div>
+        )}
 
         <div className="relative">
           <div
