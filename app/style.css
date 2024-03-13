@@ -87,10 +87,6 @@
         height: 500px;
     }
 
-    .footer-h {
-        height: 120vh !important;
-    }
-
     .footer p,
     .footer div {
         margin-top: 3rem;
