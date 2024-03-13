@@ -5,7 +5,7 @@ function UpdateSection() {
   return (
     <section className="pb-10 overflow-hidden">
       <div className="flex flex-col items-center text-center text-white">
-        <h2 className="text-[3rem] sm:text-[5rem] leading-[6rem] sm:leading-[4.5rem] font-bold overflow-hidden w-full h-[165px] relative">
+        <h2 className="max-[375px]:text-[2rem] text-[3rem] sm:text-[5rem] leading-[6rem] sm:leading-[4.5rem] font-bold overflow-hidden w-full h-[165px] relative">
           <motion.span
             initial={{ top: "100%", opacity: 0 }}
             whileInView={{ top: 0, opacity: 1 }}
@@ -25,7 +25,7 @@ function UpdateSection() {
           </motion.span>
         </h2>
 
-        <p className="font-light mt-6 h-[50px] relative w-full overflow-hidden">
+        <p className="font-light mt-6 max-[375px]:mt-0 max-[375px]:text-sm max-[375px]:max-w-md h-[50px] max-[375px]:h-[60px] relative w-full overflow-hidden">
           <motion.span
             initial={{ top: "90%", opacity: 0 }}
             whileInView={{ top: "0", opacity: 1 }}

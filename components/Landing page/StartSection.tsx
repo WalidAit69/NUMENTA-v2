@@ -1,20 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function StartSection() {
+function StartSection({ screenWidth }: { screenWidth: number }) {
   const words = ["Create", "your", "first", "AI", "image"];
 
   return (
     <section>
       <div className="h-screen flex flex-col items-center justify-center relative overflow-x-clip">
-        <div className="text-white text-9xl font-bold max-w-4xl text-center flex flex-wrap items-center justify-center gap-5 z-50">
+        <div className="text-white max-[500px]:text-5xl text-7xl lg:text-9xl font-bold max-[500px]:max-w-xs max-w-lg lg:max-w-4xl text-center flex flex-wrap items-center justify-center lg:gap-5 gap-4 z-50">
           {words.map((word, index) => (
             <span
               key={index}
-              className="h-[145px] inline-block overflow-hidden"
+              className="lg:h-[145px] h-[80px] max-[500px]:h-[70px] inline-block overflow-hidden"
             >
               <motion.span
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: screenWidth > 1024 ? 100 : 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.4,
@@ -28,7 +28,8 @@ function StartSection() {
             </span>
           ))}
         </div>
-        <div className="text-white max-w-lg text-center opacity-50 flex flex-col z-50">
+
+        <div className="text-white max-w-lg text-center opacity-50 flex flex-col z-50  max-[500px]:max-w-xs">
           <span className="overflow-hidden h-[25px] inline-flex">
             <motion.span
               initial={{ opacity: 0, y: 20 }}

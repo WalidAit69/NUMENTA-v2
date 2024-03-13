@@ -260,7 +260,7 @@ function LandingPage() {
 
       <UpdateSection />
 
-      <StartSection />
+      <StartSection screenWidth={screenWidth}/>
 
       <Footer />
     </>

@@ -41,6 +41,7 @@ function VideoSection() {
             autoPlay
             muted
             loop
+            controls={false}
             ref={videoRef}
             src="./astro.mp4"
           ></video>
@@ -49,7 +50,7 @@ function VideoSection() {
             initial={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="absolute right-6 top-14 bg-black text-white font-semibold px-7 py-1 rounded-full"
+            className="absolute right-6 sm:top-14 top-[90%] bg-black text-white font-semibold px-7 py-1 rounded-full max-[375px]:text-sm max-[375px]:px-4 "
           >
             <span>Prompt: Astronaut Walking in Mars</span>
           </motion.div>
