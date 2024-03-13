@@ -109,10 +109,7 @@ const LandingNavbar = () => {
       >
         {!isSignedIn ? (
           <>
-            <Link
-              href={isSignedIn ? "/dashboard" : "sign-in"}
-              className="hidden xl:flex"
-            >
+            <Link href={"sign-in"} className="hidden xl:flex">
               <Button
                 className="flex items-center text-base text-[#caef84] hover:opacity-80"
                 variant={"default"}
@@ -120,7 +117,7 @@ const LandingNavbar = () => {
                 SIGN IN
               </Button>
             </Link>
-            <Link href={isSignedIn ? "/dashboard" : "sign-up"} className="flex">
+            <Link href={"sign-up"} className="flex">
               <button className="flex items-center text-xs sm:text-base bg-[#dbff58] text-black sm:px-4 px-2 rounded-full hover:opacity-80 h-[25px] sm:h-[35px] xl:h-[40px]">
                 GET STARTED
               </button>
@@ -128,7 +125,12 @@ const LandingNavbar = () => {
           </>
         ) : (
           <div className="">
-            <UserButton afterSignOutUrl="https://better-ai-five.vercel.app" />
+            <UserButton />
+            <Link href={"/dashboard"} className="flex">
+              <button className="flex items-center text-xs sm:text-base bg-[#dbff58] text-black sm:px-4 px-2 rounded-full hover:opacity-80 h-[25px] sm:h-[35px] xl:h-[40px]">
+                Dashboard
+              </button>
+            </Link>
           </div>
         )}
 
