@@ -143,7 +143,7 @@ function LandingPage() {
                 <h2 className="overflow-hidden h-[70px] max-[1110px]:h-[40px]">
                   <motion.span
                     initial={{
-                      marginTop: screenWidth > 1110 ? "4rem" : "2.2rem",
+                      marginTop: screenWidth > 1110 ? "4rem" : "2.1rem",
                     }}
                     whileInView={{ marginTop: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -155,7 +155,7 @@ function LandingPage() {
                 <h2 className="overflow-hidden h-[70px] max-[1110px]:h-[40px]">
                   <motion.span
                     initial={{
-                      marginTop: screenWidth > 1110 ? "4rem" : "2.5rem",
+                      marginTop: screenWidth > 1110 ? "4rem" : "2.1rem",
                     }}
                     whileInView={{ marginTop: 0 }}
                     transition={{
@@ -171,7 +171,7 @@ function LandingPage() {
                 <h2 className="overflow-hidden h-[70px] max-[1110px]:h-[40px]">
                   <motion.span
                     initial={{
-                      marginTop: screenWidth > 1110 ? "4rem" : "2.5rem",
+                      marginTop: screenWidth > 1110 ? "4rem" : "2.1rem",
                     }}
                     whileInView={{ marginTop: 0 }}
                     transition={{
@@ -187,7 +187,7 @@ function LandingPage() {
                 <h2 className="overflow-hidden h-[70px] max-[1110px]:h-[40px]">
                   <motion.span
                     initial={{
-                      marginTop: screenWidth > 1110 ? "4rem" : "2.5rem",
+                      marginTop: screenWidth > 1110 ? "4rem" : "2.1rem",
                     }}
                     whileInView={{ marginTop: 0 }}
                     transition={{

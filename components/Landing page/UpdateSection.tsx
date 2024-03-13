@@ -46,19 +46,19 @@ function UpdateSection() {
         </p>
       </div>
 
-      <div className="flex items-center w-[90%] justify-center gap-3 my-10 mx-auto">
+      <div className="flex items-center max-[380px]:w-[100%] w-[90%] justify-center gap-3 my-10 mx-auto flex-row max-[1050px]:flex-col">
         <motion.div
           initial={{ rotate: "-15deg", scale: 1.5, y: -200, opacity: 0 }}
           whileInView={{ rotate: 0, scale: 1, y: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }}
-          className="bg-[#27272763] w-full h-[600px] rounded-3xl flex flex-col items-center justify-between"
+          className="bg-[#27272763] w-full h-[600px] rounded-3xl max-[380px]:rounded-none flex flex-col items-center justify-between"
         >
           <div className="text-white text-center mt-10 flex flex-col items-center gap-5">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
-              className="text-6xl font-bold max-w-lg"
+              className="text-4xl font-bold max-w-xs sm:max-w-lg sm:text-6xl"
             >
               Much more accurate prompt
             </motion.h2>
@@ -66,7 +66,7 @@ function UpdateSection() {
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 0.5 }}
               transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
-              className="max-w-[22rem] font-light"
+              className="sm:max-w-[22rem] max-w-[20rem] font-light"
             >
               Midjourney is an independent research lab exploring new mediums of
               thought and expanding the imaginative powers of the human species.
@@ -81,12 +81,12 @@ function UpdateSection() {
             >
               <img
                 src="./medium1.webp"
-                className="w-[180px] h-[180px] rounded-xl inline-block object-cover rotate-[-5deg]"
+                className="sm:w-[180px] w-[150px] sm:h-[180px] h-[150px] max-[380px]:w-[120px] max-[380px]:h-[120px] rounded-xl inline-block object-cover rotate-[-5deg]"
                 alt=""
               />
               <img
                 src="./medium2.webp"
-                className="w-[190px] h-[220px] rounded-xl inline-block object-cover rotate-[5deg]"
+                className="sm:w-[190px] sm:h-[220px] w-[160px] h-[190px] max-[380px]:w-[130px] max-[380px]:h-[160px] rounded-xl inline-block object-cover rotate-[5deg]"
                 alt=""
               />
             </motion.div>
@@ -137,14 +137,14 @@ function UpdateSection() {
           initial={{ rotate: "-25deg", scale: 1.4, y: -200, opacity: 0 }}
           whileInView={{ rotate: 0, scale: 1, y: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut", delay: 0.6 }}
-          className="bg-[#27272763] w-full h-[600px] rounded-3xl flex flex-col items-center justify-between"
+          className="bg-[#27272763] w-full h-[600px] rounded-3xl max-[380px]:rounded-none flex flex-col items-center justify-between"
         >
           <div className="text-white text-center mt-10 flex flex-col items-center gap-5">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
-              className="text-6xl font-bold max-w-lg"
+              className="text-4xl font-bold max-w-xs sm:max-w-lg sm:text-6xl"
             >
               Minor text drawing ability
             </motion.h2>
@@ -152,7 +152,7 @@ function UpdateSection() {
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 0.5 }}
               transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
-              className="max-w-[22rem] font-light"
+              className="sm:max-w-[22rem] max-w-[20rem] font-light"
             >
               you must write your text in quotations and --style raw or lower
               --stylize values may help
@@ -167,12 +167,12 @@ function UpdateSection() {
             >
               <img
                 src="./medium5.webp"
-                className="w-[190px] h-[220px] rounded-xl inline-block object-cover rotate-[-5deg]"
+                className="sm:w-[190px] sm:h-[220px] w-[160px] h-[190px] max-[380px]:w-[130px] max-[380px]:h-[160px] rounded-xl inline-block object-cover rotate-[-5deg]"
                 alt=""
               />
               <img
                 src="./medium4.webp"
-                className="w-[180px] h-[180px] rounded-xl inline-block object-cover rotate-[5deg]"
+                className="sm:w-[180px] w-[150px] sm:h-[180px] h-[150px] max-[380px]:w-[120px] max-[380px]:h-[120px] rounded-xl inline-block object-cover rotate-[5deg]"
                 alt=""
               />
             </motion.div>

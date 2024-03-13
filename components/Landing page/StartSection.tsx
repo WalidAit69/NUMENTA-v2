@@ -6,7 +6,7 @@ function StartSection() {
 
   return (
     <section>
-      <div className="h-screen flex flex-col items-center justify-center relative overflow-hidden">
+      <div className="h-screen flex flex-col items-center justify-center relative overflow-x-clip">
         <div className="text-white text-9xl font-bold max-w-4xl text-center flex flex-wrap items-center justify-center gap-5 z-50">
           {words.map((word, index) => (
             <span
