@@ -18,7 +18,7 @@ const Dashboardlayout = async ({ children }: { children: React.ReactNode }) => {
         <Sidebar apiLimitCount={apiLimitCount} isPremium={isPremium}/>
       </div>
 
-      <main className="md:pl-64">
+      <main className="md:pl-64 ">
         <Navbar />
         {children}
       </main>

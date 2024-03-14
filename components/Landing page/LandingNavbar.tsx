@@ -124,7 +124,7 @@ const LandingNavbar = () => {
             </Link>
           </>
         ) : (
-          <div className="">
+          <div className="flex items-center gap-2">
             <UserButton />
             <Link href={"/dashboard"} className="flex">
               <button className="flex items-center text-xs sm:text-base bg-[#dbff58] text-black sm:px-4 px-2 rounded-full hover:opacity-80 h-[25px] sm:h-[35px] xl:h-[40px]">
