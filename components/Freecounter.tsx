@@ -28,10 +28,6 @@ function Freecounter({ apiLimitCount = 0, isPremium = false }: SidebarProps) {
     return null;
   }
 
-  if (isPremium) {
-    return null;
-  }
-
   if (!user) {
     return null;
   }
@@ -84,31 +80,48 @@ function Freecounter({ apiLimitCount = 0, isPremium = false }: SidebarProps) {
                   </p>
                 </div>
 
-                <div className="font-bold text-sm h-fit py-[.1rem] px-2 rounded-md flex items-center justify-center text-black bg-[#3fdc78]">
-                  Free
-                </div>
+                {!isPremium && (
+                  <div className="font-bold text-sm h-fit py-[.1rem] px-2 rounded-md flex items-center justify-center text-black bg-[#3fdc78]">
+                    Free
+                  </div>
+                )}
               </div>
             </div>
           </div>
 
           <div>
-            <button
-              onClick={proModal.onOpen}
-              className={cn(
-                "flex items-center justify-center w-full text-white font-medium bg-transparent border-[1.5px] border-[#444444] py-2 rounded-[11px] hover:bg-[#444444] transition-all",
-                !isDark && "text-black border-[#ddd9d9] hover:bg-[#ddd9d9]"
-              )}
-            >
-              Upgrade to Pro
-            </button>
-            <p
-              className={cn(
-                "text-zinc-400 text-[.8rem] pt-2 text-center",
-                !isDark && "text-zinc-600"
-              )}
-            >
-              {MAX_FREE_COUNTS - apiLimitCount} Generations left
-            </p>
+            {!isPremium && (
+              <button
+                onClick={proModal.onOpen}
+                className={cn(
+                  "flex items-center justify-center w-full text-white font-medium bg-transparent border-[1.5px] border-[#444444] py-2 rounded-[11px] hover:bg-[#444444] transition-all",
+                  !isDark && "text-black border-[#ddd9d9] hover:bg-[#ddd9d9]"
+                )}
+              >
+                Upgrade to Pro
+              </button>
+            )}
+
+            {!isPremium && (
+              <p
+                className={cn(
+                  "text-zinc-400 text-[.8rem] pt-2 text-center",
+                  !isDark && "text-zinc-600"
+                )}
+              >
+                {MAX_FREE_COUNTS - apiLimitCount} Generations left
+              </p>
+            )}
+
+            <div className="flex items-end justify-end">
+              <span
+                className={cn(
+                  "font-bold text-sm h-fit py-[.1rem] px-2 rounded-md flex items-center justify-center text-[#8e55ea] bg-[#393349]"
+                )}
+              >
+                Premium
+              </span>
+            </div>
           </div>
         </CardContent>
       </Card>
