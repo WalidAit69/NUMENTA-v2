@@ -19,7 +19,7 @@ function SubscriptionButton({ isPremium }: SubscriptionButtonProps) {
 
       window.location.href = res.data.url;
     } catch (error) {
-      toast.error("Something went wrong")
+      toast.error("Something went wrong");
     } finally {
       setloading(false);
     }
@@ -27,13 +27,11 @@ function SubscriptionButton({ isPremium }: SubscriptionButtonProps) {
 
   return (
     <Button
-      className="w-fit"
+      className="w-fit text-white font-bold border-[1.5px] border-[#444444] py-2 px-10 bg-[#282828] hover:scale-[1.02] transition-all"
       onClick={onClick}
       disabled={loading}
-      variant={isPremium ? "default" : "premuim"}
     >
-      {isPremium ? "Manage Subscription" : "Upgrade"}
-      {!isPremium && <Zap className="w-4 h-4 ml-2" />}
+      {isPremium ? "Manage Subscription" : "Upgrade to Pro"}
     </Button>
   );
 }

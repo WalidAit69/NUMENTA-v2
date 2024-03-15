@@ -1,6 +1,7 @@
 import useSwitch from "@/store/Switch";
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 function ModeSwitch() {
   const { isDark, setisDark } = useSwitch();
@@ -23,12 +24,14 @@ function ModeSwitch() {
     }
   }, [isDark]);
 
-
   return (
-    <div className="relative flex w-[90%] mx-auto bg-[#232627df] rounded-lg text-white">
+    <div
+      className={cn(
+        "relative flex w-[90%] mx-auto bg-[#232627] rounded-lg text-white" , !isDark && "bg-[#bbbbbb]")}
+    >
       <div
         onClick={handleLightClick}
-        className="w-1/2 text-center flex items-center justify-center gap-1 h-[45px] z-10 cursor-pointer"
+        className="w-1/2 text-center flex items-center justify-center gap-1 h-[45px] z-10 cursor-pointer text-sm font-semibold"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +39,7 @@ function ModeSwitch() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 transition-all"
+          className="w-5 h-5 transition-all"
         >
           <path
             strokeLinecap="round"
@@ -49,7 +52,7 @@ function ModeSwitch() {
 
       <div
         onClick={handleDarkClick}
-        className="w-1/2 text-center flex items-center justify-center gap-1 z-10 cursor-pointer"
+        className="w-1/2 text-center flex items-center justify-center gap-1 z-10 cursor-pointer text-sm font-semibold"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +60,7 @@ function ModeSwitch() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 transition-all"
+          className="w-5 h-5 transition-all"
         >
           <path
             strokeLinecap="round"

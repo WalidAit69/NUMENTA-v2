@@ -1,4 +1,4 @@
-import create from "zustand";
+import { create } from "zustand";
 
 interface BooleanState {
   isDark: boolean;
@@ -6,8 +6,8 @@ interface BooleanState {
 }
 
 const useSwitch = create<BooleanState>((set) => ({
-    isDark: true,
-    setisDark: (newValue) => set({ isDark: newValue }),
+  isDark: true,
+  setisDark: (newValue) => set({ isDark: newValue }),
 }));
 
 export default useSwitch;

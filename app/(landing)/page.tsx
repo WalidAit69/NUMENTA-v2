@@ -36,7 +36,7 @@ function LandingPage() {
   }, []);
 
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       const position = window.scrollY;
       setScrollPosition(position);
