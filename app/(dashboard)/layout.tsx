@@ -19,10 +19,10 @@ const Dashboardlayout = async ({ children }: { children: React.ReactNode }) => {
       </div>
 
       <main className="md:pl-[20rem] h-full w-full flex flex-col">
-        <div className="md:hidden absolute left-5 top-5">
+        <div className="md:hidden absolute left-5 top-5 max-[500px]:right-3 max-[500px]:top-3">
           <Mobilesidebar apiLimitCount={apiLimitCount} isPremium={isPremium} />
         </div>
-        <div className="absolute right-3 top-3">
+        <div className="absolute right-3 top-3 max-[500px]:right-1 max-[500px]:top-1">
           <Navbar />
         </div>
         {children}
