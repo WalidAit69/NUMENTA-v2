@@ -13,7 +13,7 @@ function Mobilesidebar({ apiLimitCount, isPremium = false }: SidebarProps) {
   return (
     <Sheet>
       <SheetTrigger>
-        <Menu className="hover:bg-accent p-2 rounded" size={40} />
+        <Menu className="hover:bg-accent p-2 rounded text-zinc-500" size={40} />
       </SheetTrigger>
       <SheetContent side={"left"} className="p-0 w-[20rem] max-[500px]:w-full">
         <Sidebar apiLimitCount={apiLimitCount} isPremium={isPremium} />

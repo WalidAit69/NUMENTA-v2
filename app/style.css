@@ -107,3 +107,9 @@
         margin-top: 3rem;
     }
 }
+
+@media (max-height:700px) {
+    .dashboardmr {
+        margin-top: 2.5rem;
+    }
+}

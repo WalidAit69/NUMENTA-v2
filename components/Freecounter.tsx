@@ -113,15 +113,17 @@ function Freecounter({ apiLimitCount = 0, isPremium = false }: SidebarProps) {
               </p>
             )}
 
-            <div className="flex items-end justify-end">
-              <span
-                className={cn(
-                  "font-bold text-sm h-fit py-[.1rem] px-2 rounded-md flex items-center justify-center text-[#8e55ea] bg-[#393349]"
-                )}
-              >
-                Premium
-              </span>
-            </div>
+            {isPremium && (
+              <div className="flex items-end justify-end">
+                <span
+                  className={cn(
+                    "font-bold text-sm h-fit py-[.1rem] px-2 rounded-md flex items-center justify-center text-[#8e55ea] bg-[#393349]"
+                  )}
+                >
+                  Premium
+                </span>
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>

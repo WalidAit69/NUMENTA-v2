@@ -36,14 +36,16 @@ const LandingNavbar = () => {
     } else if (MenuOpen && screenWidth < 500) {
       controls.start({ height: "100vh", width: "100vw" });
       controls2.start({ display: "flex", transition: { delay: 0.3 } });
+      document.body.style.overflowY = "hidden";
     } else {
       controls.start({ height: 0, width: 0 });
       controls2.start({ display: "none" });
+      document.body.style.overflowY = "visible";
     }
   }, [MenuOpen, screenWidth]);
 
   return (
-    <div className="flex items-center justify-between p-4 min-[500px]:px-10 z-50">
+    <div className="flex items-center justify-between p-4 min-[500px]:px-10 z-[9999]">
       <div className="overflow-hidden relative sm:h-[40px] h-[30px]">
         <motion.h1
           initial={{ marginTop: "3rem" }}
@@ -161,7 +163,7 @@ const LandingNavbar = () => {
             initial={{ width: 0, height: 0 }}
             animate={controls}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="absolute -top-5 -right-[1.1rem] min-[500px]:-right-4 min-[500px]:-top-3 bg-[#b6e75a] z-0 text-black lg:hidden min-[500px]:rounded-[.6rem]"
+            className="z-[9] absolute -top-5 -right-[1.1rem] min-[500px]:-right-4 min-[500px]:-top-3 bg-[#b6e75a] text-black lg:hidden min-[500px]:rounded-[.6rem]"
           >
             <motion.ul
               initial={{ display: "none" }}

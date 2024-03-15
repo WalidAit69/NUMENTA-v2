@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import useSwitch from "@/store/Switch";
@@ -62,17 +61,17 @@ export default function DashboardPage() {
     >
       <div
         className={cn(
-          "my-auto h-[98%] w-full rounded-3xl mx-2 flex flex-col justify-center bg-[#bbbbbb]",
+          "my-auto h-[98%] max-[500px]:h-full w-full rounded-3xl max-[500px]:rounded-none max-[500px]:mx-0 mx-2 flex flex-col justify-center bg-[#bbbbbb]",
           isDark && "bg-[#232627]"
         )}
       >
-        <div className={cn("mb-8 space-y-4", isDark && "text-white")}>
-          <h2 className="text-2xl md:text-4xl font-bold text-center">
+        <div className={cn("mb-8 space-y-4 dashboardmr", isDark && "text-white")}>
+          <h2 className="text-2xl md:text-4xl max-[500px]:text-base font-bold text-center">
             Unlock the power of AI
           </h2>
           <p
             className={cn(
-              "text-muted-foreground font-light text-sm md:text-lg text-center text-zinc-600",
+              "text-muted-foreground font-light text-sm md:text-lg  max-[500px]:text-[.8rem] text-center text-zinc-600",
               isDark && "text-zinc-400"
             )}
           >
